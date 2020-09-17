@@ -1,0 +1,137 @@
+
+
+   <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Diet Record
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ <ion-content>
+  <ion-segment [(ngModel)]="selectTabs" color="primary" >
+   <ion-segment-button value="table view">
+     <ion-label>Table View</ion-label>
+     <ion-icon name="calendar-outline"></ion-icon>
+   </ion-segment-button>
+   <ion-segment-button value="chart">
+     <ion-label>Chart</ion-label>
+     <ion-icon name="bar-chart-outline"></ion-icon>
+   </ion-segment-button>
+   <ion-segment-button value="export">
+     <ion-label>Export</ion-label>
+     <ion-icon name="exit-outline"></ion-icon>
+   </ion-segment-button>
+ </ion-segment>
+ <div [hidden]="selectTabs != 'table view'">
+  <ion-grid>
+    <ion-row>
+      <ion-col class ="label">
+        Date
+      </ion-col>
+      <ion-col class ="label">
+        CHO
+      </ion-col>
+      <ion-col class ="label">
+        Fat
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col class ="textlabel">
+        13/08/2020
+      </ion-col>
+      <ion-col class ="textlabel">
+        100
+      </ion-col>
+      <ion-col class ="textlabel">
+        50
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col class ="textlabel">
+        14/08/2020
+      </ion-col>
+      <ion-col class ="textlabel">
+        600
+      </ion-col>
+      <ion-col class ="textlabel">
+        50
+      </ion-col>
+      
+    </ion-row>
+   
+
+    <ion-row>
+      <ion-col class ="textlabel">
+        17/08/2020
+      </ion-col>
+      <ion-col class ="textlabel">
+        600
+      </ion-col>
+      <ion-col class ="textlabel">
+        50
+      </ion-col>
+      
+    </ion-row>
+    </ion-grid>
+    
+    
+
+
+</div>
+
+<div [hidden]="selectTabs != 'chart'">
+
+
+<ion-card>
+  <ion-card-header>
+    Tracking Chart
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #lineCanvas></canvas>
+  </ion-card-content>
+</ion-card>
+</div>
+
+
+<div [hidden]="selectTabs != 'export'">
+
+  <ion-buttons slot="start">
+    <ion-button (click)="exportCSV()">
+      Export
+    </ion-button>
+  </ion-buttons>
+
+  <!-- <table border="1" class="data-table">
+    <tr>
+      <td *ngFor="let header of headerRow" text-center><b>{{ header }}</b></td>
+    </tr>
+    <tr *ngFor="let row of csvData; let i = index">
+      <td *ngFor="let data of row; let j = index; trackBy: trackByFn" class="data-col ">
+        <ion-input type="text" [(ngModel)]="csvData[i][j]"></ion-input>
+      </td>
+    </tr>
+  </table> -->
+
+  <ion-item lines="none">
+    <ion-label>Start Date</ion-label>
+    <ion-datetime class=time displayFormat="MM-DD-YYYY" placeholder="Today"></ion-datetime>
+</ion-item>
+
+
+<ion-item lines="none">
+  <ion-label>End Date</ion-label>
+  <ion-datetime class=time displayFormat="MM-DD-YYYY" placeholder="Today"></ion-datetime>
+</ion-item>
+
+
+
+<!-- <ion-button  class = "center" (click)="sendEmail()" size = "small" class = "center" color="primary">Send Email </ion-button> -->
+
+
+</div>
+
+</ion-content>

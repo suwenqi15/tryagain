@@ -1,0 +1,44 @@
+
+
+<form [formGroup]="foodCardForm" (ngSubmit)="onSave()">
+<ion-card >  
+  <ion-item-sliding >
+    <ion-item-options  side="end">
+    <ion-button color = "danger" (click)="removeItem(i)"><ion-icon name="trash"></ion-icon> Delete</ion-button>
+  </ion-item-options>
+  <ion-item  lines="none"></ion-item>
+    <ion-item  lines="none">
+    <ion-label class="label"> Food Name</ion-label>
+
+    <ion-input  formControlName = "food_name" type="text" required class = "right" placeholder=" Enter" formControlName="food_name"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label class="label">Unifftt</ion-label>
+    <ion-input  formControlName = "unit" type="text" required class = "left1" placeholder="Enter" formControlName="unit"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label class="unique">Qty</ion-label>
+    <ion-input  formControlName = "qty"  type="text" required class = "right" placeholder="Enter" formControlName="qty"></ion-input>
+  </ion-item>
+
+
+  <ion-item lines="none" >
+    <ion-label class="label">CHO</ion-label>
+    <ion-input formControlName = "cho"  type="text" required class = "left2" placeholder="Enter" formControlName="cho"></ion-input>
+
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label class="label">Fat</ion-label>
+    <ion-input formControlName = "fat" type="text" required class = "right" placeholder="Enter" formControlName="fat"></ion-input>
+  </ion-item>
+
+
+  <ion-button class = "savebutton" type="submit" color="tertiary"  shape="block" expand="block">Save</ion-button>
+</ion-item-sliding>
+
+</ion-card>
+
+
+</form >

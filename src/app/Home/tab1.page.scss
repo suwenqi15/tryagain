@@ -1,0 +1,57 @@
+ion-segment-button{
+    min-width: 115px;
+}
+
+.label{font-weight:bold;
+  position: relative;
+
+  
+}
+
+.unique {
+  font-weight:bold;
+  text-align: right;
+  padding-left: 7px;
+
+}
+
+
+.left1 {
+    text-align: right;
+    right: 17px;
+}
+
+.left2 {
+  text-align: right;
+  right: 24px;
+}
+
+
+.right {
+    text-align: right;
+    
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-top: 27px;
+  display: block !important;
+}
+
+.add{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  height: 30px;
+  width: 200px;
+}
+
+.time{
+  margin-left: -15px;
+  margin-right: auto;
+  font-weight:bold
+  
+
+}
